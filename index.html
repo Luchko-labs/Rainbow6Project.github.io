@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> R6 Main Page </title>
+		<link href="css/MPstyle.css" rel="stylesheet" type="text/css">
+		<meta charset="UTF-8">
+		<meta name="keywords" content="Rainbow Six Siege, R6, Rainbow 6">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	
+	<body>
+	
+		<div class="header">
+			<h1 style="background: rgba(54, 200, 200, 0.6);"> Rainbow Six Siege </h1>
+			<p> Some stuff about  the game!</p>
+		</div>
+		
+		<div class="navbar">
+			<a href="index.html" class="right btn btn1"> Home Page </a>
+			<a href="Graphics.html" class="btn btn2"> Graphics </a>
+			<a href="Gameplay.html" class="btn btn3"> Gameplay and UI </a>
+			<a href="Ops.html" class="btn btn4"> Operators </a>
+		</div>
+		
+		<div class="row">
+			<div class="leftside slideshow-container">
+				<div class="mySlides fade">
+					<div class="numbertext">1 / 3</div>
+					<img src="images/slide1.jfif" style="width:100%">
+					<div class="text">Amazing Graphics</div>
+				</div>
+				<div class="mySlides fade">
+					<div class="numbertext">2 / 3</div>
+					<img src="images/slide2.png" style="width:100%">
+					<div class="text">User-friendly in-game UI</div>
+				</div>
+				<div class="mySlides fade">
+					<div class="numbertext">3 / 3</div>
+					<img src="images/slide3.png" style="width:100%">
+					<div class="text">A lot of different operators matching your own playstyle</div>
+				</div>
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			
+			<div class="rightside" > 
+				<h1> Base Info </h1>
+				<p> Tom Clancy's Rainbow Six Siege (aka R6) is created by the game developers in Ubisoft. 
+				Released back in 2015 the game still grows in popularity even today!
+				R6 is a 5v5 firstperson shooter that challenges you aiming and strategic skills.
+				The game is highly competitive and has a high learning-ceiling but also has a Casual game mode where you and your friends
+				can chill together. It is rated 8.5 on IGN.</p>
+			</div>
+		</div> 
+		
+		<div class="footer">
+			<div class="inner_footer"> 
+				<h1> Made by: <a href="https://www.instagram.com/ivaka_anto/?hl=bg" target="_blank">Ivaylo Antonov</a> </h1>
+				<h2> With help from <a href="https://www.instagram.com/lucho_litshit/?hl=bg" target="_blank">Lachezar Damianov</a> </h2>
+			</div>
+		</div>
+	
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1}    
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+				}	
+				for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+			}
+		</script>
+		
+	</body>
+	
+</html>
+	
